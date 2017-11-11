@@ -9,5 +9,5 @@
 ],
 ```
 ### 在 theme 導向 Facebook 登入
-`{{"{{url('/redirect')"}}}}`
+`{{url('/redirect')}}`
 
