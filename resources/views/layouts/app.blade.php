@@ -39,10 +39,10 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li class="nav-item"><a href="{{ route('login') }}" class="text-white">登入</a></li>
+                            <li class="nav-item"><a href="{{url('/redirect')}}" class="text-white">登入</a></li>
                         @else
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -50,7 +50,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                        Logout
+                                        登出
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
