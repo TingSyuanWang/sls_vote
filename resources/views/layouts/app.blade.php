@@ -8,28 +8,26 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') | {{ config('app.name') }}</title>
+    <link rel="shortcut icon" href="https://sls.asia.edu.tw/wp-content/uploads/fbrfg/favicon.ico" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
             <div class="container">
-                <div class="navbar-header">
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', '用愛改變世界 X 志工大學') }}
+                </a>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', '用愛改變世界 X 志工大學') }}
-                    </a>
-                </div>
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
@@ -41,8 +39,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}" class="nav-item">Login</a></li>
-                            <li><a href="{{ route('register') }}" class="nav-item">Register</a></li>
+                            <li class="nav-item"><a href="{{ route('login') }}" class="text-white">登入</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
