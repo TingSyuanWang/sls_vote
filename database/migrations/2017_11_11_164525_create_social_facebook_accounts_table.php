@@ -17,6 +17,12 @@ class CreateSocialFacebookAccountsTable extends Migration
             $table->integer('user_id');
             $table->string('provider_user_id');
             $table->string('provider');
+            $table->boolean('team1')->default(false);
+            $table->boolean('team2')->default(false);
+            $table->boolean('team3')->default(false);
+            $table->boolean('team4')->default(false);
+            $table->boolean('team5')->default(false);
+            $table->boolean('team6')->default(false);
             $table->timestamps();
         });
     }

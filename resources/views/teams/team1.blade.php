@@ -9,11 +9,12 @@
         <div class="row">
             <div class="col-12 col-lg-3 mb-4">
                 <h1>團隊名稱</h1>
-                <a href="#" class="btn btn-primary btn-block" id="like-button"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
+                <button href="#" class="btn btn-primary btn-block" id="like-button"><i class="fa fa-thumbs-o-up"></i> 讚我一票</button>
+                <h3>人氣：{{$countTeam1}}</h3>
             </div>
             <div class="col-12 col-lg-9">
                 <div class="slickwrapper">
-                    <img src="{{asset('img/team1/1.jpg')}}" class="img-fluid rounded ">
+                    <img src="{{asset('img/team1/1.jpg')}}" class="img-fluid rounded">
                     <img src="{{asset('img/team1/2.jpg')}}" class="img-fluid rounded">
                     <img src="{{asset('img/team1/3.jpg')}}" class="img-fluid rounded">
                     <img src="{{asset('img/team1/4.jpg')}}" class="img-fluid rounded">
@@ -116,6 +117,16 @@
 
 @section('script')
     <script>
+        $(document).ready(function() {
+            var userTeam1 = {!! json_encode($userTeam1) !!};
+            @if (Auth::check())
+            if (userTeam1 === 1) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('您已經點讚囉！');
+            }
+            @endif
+
+        });
         $('.slickwrapper').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -152,8 +163,9 @@
                         button: {
                             text: "確定"
                         }
+                    }).then(function() {
+                        window.location.href = "{{route('voteTeam1')}}";
                     });
-
                 } else {
                     swal("您已取消投票！", {
                         icon: "error",
@@ -190,8 +202,9 @@
                         button: {
                             text: "確定"
                         }
+                    }).then(function() {
+                        window.location.href = "{{route('facebookLogin')}}";
                     });
-                    window.location.href = "{{route('facebookLogin')}}";
                 } else {
                     swal("您已取消登入！", {
                         icon: "error",
