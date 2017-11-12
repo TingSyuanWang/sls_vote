@@ -20,4 +20,8 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/redirect', 'SocialAuthFacebookController@redirect')->name('facebookLogin');;
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+// Team Route
+Route::get('/team1', 'TeamController@team1')->name('team1');
+

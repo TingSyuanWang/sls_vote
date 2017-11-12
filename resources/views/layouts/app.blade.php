@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="https://sls.asia.edu.tw/wp-content/uploads/fbrfg/favicon.ico" />
 
     <!-- Styles -->
+    <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li class="nav-item"><a href="{{url('/')}}" class="text-white">首頁</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -64,10 +65,11 @@
             </div>
         </nav>
 
-        @yield('content')
+@yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+@yield('script')
 </body>
 </html>

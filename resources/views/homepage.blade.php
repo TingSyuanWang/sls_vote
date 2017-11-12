@@ -14,7 +14,7 @@
                         <h4 class="card-title">國際關懷新視野服務深化再創新：香港恆生-亞大管院暑期國際志工交流服務(第二年)</h4>
                         <hr>
                         <p class="card-text">兩校秉持對等交流精神，每年進行多元主題之機構服務。我們有系統與紮實的訓練，並有老師全程參與討論與指導。我們的訓練以自主學習與PBL方式進行，學生學習如何分析問題、尋找與組織資源、制訂與執行方案，最後還有檢討與成果發表。</p>
-                        <a href="#" class="btn btn-primary btn-block"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
+                        <a href="{{route('team1')}}" class="btn btn-primary btn-block"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
                     </div>
                 </div>
             </div>

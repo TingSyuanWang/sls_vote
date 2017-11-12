@@ -11,5 +11,6 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.js(['resources/assets/js/app.js', 'node_modules/slick-carousel/slick/slick.js'], 'public/js')
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .styles('resources/assets/sass/custom.css', 'public/css/libs.css');
