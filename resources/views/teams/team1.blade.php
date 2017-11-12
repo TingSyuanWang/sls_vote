@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12 col-lg-3 mb-4">
                 <h1>團隊名稱</h1>
-                <a href="#" class="btn btn-primary btn-block"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
+                <a href="#" class="btn btn-primary btn-block" id="like-button"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
             </div>
             <div class="col-12 col-lg-9">
                 <div class="slickwrapper">
@@ -122,6 +122,87 @@
             dots: true,
             adaptiveHeight: true,
             infinite: true
+        });
+        $('#like-button').click(function() {
+            @if (Auth::check())
+            swal({
+                title: "確定投下您神聖的一票？",
+                icon: "warning",
+                buttons: {
+                    cancel: {
+                        text: "取消",
+                        value: false,
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    },
+                    confirm: {
+                        text: "確定",
+                        value: true,
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    }
+                },
+                dangerMode: true
+            }).then(function(willVote) {
+                if (willVote) {
+                    swal("您已投出您神聖的一票！", {
+                        icon: "success",
+                        button: {
+                            text: "確定"
+                        }
+                    });
+
+                } else {
+                    swal("您已取消投票！", {
+                        icon: "error",
+                        button: {
+                            text: "確定"
+                        }
+                    });
+                }
+            });
+            @else
+            swal({
+                title: "請先登入才能進行投票",
+                icon: "warning",
+                buttons: {
+                    cancel: {
+                        text: "取消登入",
+                        value: false,
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    },
+                    confirm: {
+                        text: "我要登入",
+                        value: true,
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    }
+                }
+            }).then(function(willLogin) {
+                if (willLogin) {
+                    swal("進入登入畫面", {
+                        icon: "success",
+                        button: {
+                            text: "確定"
+                        }
+                    });
+                    window.location.href = "{{route('facebookLogin')}}";
+                } else {
+                    swal("您已取消登入！", {
+                        icon: "error",
+                        button: {
+                            text: "確定"
+                        }
+                    });
+                }
+            });
+            @endif
+
         });
     </script>
 @endsection
