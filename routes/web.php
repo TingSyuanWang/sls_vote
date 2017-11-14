@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', 'TeamController@index')->name('homepage');
 
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 

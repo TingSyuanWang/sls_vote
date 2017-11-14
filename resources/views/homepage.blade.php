@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col-12 col-md-4 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{asset('img/homepage/3.jpg')}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('img/homepage/4.jpg')}}" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">亞洲大學國際醫療志工團-2017年尼泊爾義診-送愛到天堂計劃</h4>
                         <hr>

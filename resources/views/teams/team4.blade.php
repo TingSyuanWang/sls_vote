@@ -22,6 +22,8 @@
                     <img src="{{asset('img/team4/6.jpg')}}" class="img-fluid rounded">
                     <img src="{{asset('img/team4/7.jpg')}}" class="img-fluid rounded">
                     <img src="{{asset('img/team4/8.jpg')}}" class="img-fluid rounded">
+                    <img src="{{asset('img/team4/9.jpg')}}" class="img-fluid rounded">
+                    <img src="{{asset('img/team4/10.jpg')}}" class="img-fluid rounded">
                 </div>
                 <h1>影片</h1>
                 <hr>

@@ -5,10 +5,22 @@ namespace App\Http\Controllers;
 use App\SocialFacebookAccount;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class TeamController extends Controller
 {
+    public function index() {
+
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
+
+        return view('homepage');
+    }
+
     public function team1() {
+
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
 
         $userId = Auth::id();
         $userTeam1 = SocialFacebookAccount::where('user_id', $userId)->pluck('team1')->first();
@@ -21,6 +33,9 @@ class TeamController extends Controller
 
     public function team2() {
 
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
+
         $userId = Auth::id();
         $userTeam2 = SocialFacebookAccount::where('user_id', $userId)->pluck('team2')->first();
 
@@ -31,6 +46,9 @@ class TeamController extends Controller
     }
 
     public function team3() {
+
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
 
         $userId = Auth::id();
         $userTeam3 = SocialFacebookAccount::where('user_id', $userId)->pluck('team3')->first();
@@ -43,6 +61,9 @@ class TeamController extends Controller
 
     public function team4() {
 
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
+
         $userId = Auth::id();
         $userTeam4 = SocialFacebookAccount::where('user_id', $userId)->pluck('team4')->first();
 
@@ -54,6 +75,9 @@ class TeamController extends Controller
 
     public function team5() {
 
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
+
         $userId = Auth::id();
         $userTeam5 = SocialFacebookAccount::where('user_id', $userId)->pluck('team5')->first();
 
@@ -64,6 +88,9 @@ class TeamController extends Controller
     }
 
     public function team6() {
+
+        $currentLink = $_SERVER['REQUEST_URI'];
+        Session::put('links', $currentLink);
 
         $userId = Auth::id();
         $userTeam6 = SocialFacebookAccount::where('user_id', $userId)->pluck('team6')->first();
