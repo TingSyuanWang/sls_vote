@@ -8,7 +8,7 @@ class SocialFacebookAccount extends Model
 {
     //
     protected $primaryKey = 'user_id';
-    protected $fillable = ['user_id', 'provider_user_id', 'provider', 'team1', 'team2', 'team3', 'team4', 'team5', 'team6'];
+    protected $fillable = ['user_id', 'provider_user_id', 'provider', 'team1', 'team2', 'team3', 'team4', 'team5', 'team6', 'team7'];
     public function user()
     {
         return $this->belongsTo(User::class);

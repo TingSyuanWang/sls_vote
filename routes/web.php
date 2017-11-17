@@ -39,3 +39,6 @@ Route::get('/vote/team5', 'VoteController@voteTeam5')->name('voteTeam5');
 Route::get('/team6', 'TeamController@team6')->name('team6');
 Route::get('/vote/team6', 'VoteController@voteTeam6')->name('voteTeam6');
 
+Route::get('/team7', 'TeamController@team7')->name('team7');
+Route::get('/vote/team7', 'VoteController@voteTeam7')->name('voteTeam7');
+

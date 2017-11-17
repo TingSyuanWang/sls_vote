@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-lg-4 mb-4">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/1.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/2.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/3.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -40,9 +40,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4 mb-4">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/4.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -53,7 +51,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/5.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+            <div class="col-12 col-md-3 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="{{asset('img/homepage/6.jpg')}}" alt="Card image cap">
                     <div class="card-body">
@@ -72,6 +72,17 @@
                         <hr>
                         <p class="card-text">「柬團第八梯：柬埔寨弱勢社區服務方案」延續前七梯次的服務能量，於偏鄉弱勢社區進行服務，透過海外跨文化服務，讓學生發揮潛能與學科訓練專長，建立國際視野與領導統籌能力，也持續強化與柬埔寨大專青年的協力合作模式，讓跨國青年學生彼此交流、相互學習、建立國際團隊合作與協調的能力。</p>
                         <a href="{{route('team6')}}" class="btn btn-primary btn-block"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{asset('img/homepage/7.jpg')}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">OProSS-Africa 送愛到天堂</h4>
+                        <hr>
+                        <p class="card-text">本專案係帶領學生前往非洲賴索托及非洲史瓦濟蘭進行「海外專業服務學習」專案，帶領學生對於海外在地機構以及所在之社區，進行協助，運用學生在醫學健康、創意設計、資訊電機、管理、人文社會的專業技能，改善當地居民的教育、生活、健康、社區產業經營等之水平與環境。</p>
+                        <a href="{{route('team7')}}" class="btn btn-primary btn-block"><i class="fa fa-thumbs-o-up"></i> 讚我一票</a>
                     </div>
                 </div>
             </div>

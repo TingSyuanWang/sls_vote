@@ -23,6 +23,7 @@ class CreateSocialFacebookAccountsTable extends Migration
             $table->boolean('team4')->default(false);
             $table->boolean('team5')->default(false);
             $table->boolean('team6')->default(false);
+            $table->boolean('team7')->default(false);
             $table->timestamps();
         });
     }

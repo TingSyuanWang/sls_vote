@@ -81,4 +81,16 @@ class VoteController extends Controller
             return redirect('/team6');
         }
     }
+
+    public function voteTeam7()
+    {
+        $userId = Auth::id();
+        if ($userId === null) {
+            return redirect('/team7');
+        } else {
+            $user = SocialFacebookAccount::where('user_id', $userId)->first();
+            $user->update(['team7' => true]);
+            return redirect('/team7');
+        }
+    }
 }

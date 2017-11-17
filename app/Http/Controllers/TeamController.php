@@ -123,4 +123,22 @@ class TeamController extends Controller
         return view('teams.team6', compact('userTeam6', 'countTeam6'));
 
     }
+
+    public function team7() {
+
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
+        Session::put('links', $currentLink);
+
+        $userId = Auth::id();
+        $userTeam7 = SocialFacebookAccount::where('user_id', $userId)->pluck('team7')->first();
+
+        $countTeam7 = SocialFacebookAccount::where('team7', '=', 1)->count();
+
+        return view('teams.team7', compact('userTeam7', 'countTeam7'));
+
+    }
 }
