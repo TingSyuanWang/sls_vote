@@ -11,15 +11,18 @@ class TeamController extends Controller
 {
     public function index() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
-        Session::put('links', $currentLink);
+        Session::put('links', '/');
 
         return view('homepage');
     }
 
     public function team1() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
@@ -33,7 +36,11 @@ class TeamController extends Controller
 
     public function team2() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
@@ -47,7 +54,11 @@ class TeamController extends Controller
 
     public function team3() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
@@ -61,7 +72,11 @@ class TeamController extends Controller
 
     public function team4() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
@@ -75,7 +90,11 @@ class TeamController extends Controller
 
     public function team5() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
@@ -89,7 +108,11 @@ class TeamController extends Controller
 
     public function team6() {
 
-        $currentLink = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI']; //returns the current URL
+        $parts = explode('/',$url);
+
+        $currentLink = $parts[2];
+
         Session::put('links', $currentLink);
 
         $userId = Auth::id();
