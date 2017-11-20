@@ -10,13 +10,15 @@
 
     <title>@yield('title') | {{ config('app.name') }}</title>
     <link rel="shortcut icon" href="https://sls.asia.edu.tw/wp-content/uploads/fbrfg/favicon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="bg-sakura">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
             <div class="container">
                 <!-- Branding Image -->
@@ -70,6 +72,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 @yield('script')
 </body>
 </html>
