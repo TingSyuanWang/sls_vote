@@ -16,10 +16,16 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    height: 350px;
+    height: 465px;
     outline: 0 !important;
     color: #ccc;
     font-size: 40px;
+}
+
+@media only screen and (max-width: 760px) {
+    .slide {
+        height: 190px;
+    }
 }
 
 .controls {
@@ -29,11 +35,12 @@
 
 .captions {
     flex: 1;
-    width: 100px;
-    padding: 10px;
+    width: 50px;
+    padding-top: 10px;
     margin-top: 2px;
     color: #7b7b7b;
     background: #fff;
+    height: 45px;
 }
 
 .caption {

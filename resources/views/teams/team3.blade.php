@@ -29,14 +29,46 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">MCCSS的婦女幫我們繪製印度圖騰HANNA，她們平常可以利用繪製HANNA賺取生活費</div>
-                            <div class="caption">入境隨俗，親身體驗當地文化，穿著當地服飾Saree紗麗</div>
-                            <div class="caption">利用明信片與Vishranthi中的老人介紹台灣，並且寫下祝福的話語，再贈送給她</div>
-                            <div class="caption">在MCCSS每個人都擁有獨一無二的HANNA後，與機構社工們及印度同學的大合照</div>
-                            <div class="caption">教導NIEPMD中的多重障礙兒童使用乾洗手，並進行衛生教育</div>
-                            <div class="caption">與NIEPMD中的多重障礙兒童玩球，促進其手腳協調</div>
-                            <div class="caption">與NIEPMD的社工員、老師、多重障礙兒童及其家長合影</div>
-                            <div class="caption">與Vishranthi中的老人住民聊天、交流，我們就像他們的孫子孫女一樣</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    MCCSS的婦女幫我們繪製印度圖騰HANNA，她們平常可以利用繪製HANNA賺取生活費
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    入境隨俗，親身體驗當地文化，穿著當地服飾Saree紗麗
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    利用明信片與Vishranthi中的老人介紹台灣，並且寫下祝福的話語，再贈送給她
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    在MCCSS每個人都擁有獨一無二的HANNA後，與機構社工們及印度同學的大合照
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    教導NIEPMD中的多重障礙兒童使用乾洗手，並進行衛生教育
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    與NIEPMD中的多重障礙兒童玩球，促進其手腳協調
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    與NIEPMD的社工員、老師、多重障礙兒童及其家長合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    與Vishranthi中的老人住民聊天、交流，我們就像他們的孫子孫女一樣
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
@@ -140,6 +172,13 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam3 = {!! json_encode($userTeam3) !!};
             @if (Auth::check())
             if (userTeam3 === 1) {

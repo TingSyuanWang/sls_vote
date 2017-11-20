@@ -31,15 +31,51 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">亞大師生為尼泊爾奇旺區喬哥地民眾進行團體衛教</div>
-                            <div class="caption">亞大志工團成員討論如何分裝提供給尼泊爾山區民眾的藥物</div>
-                            <div class="caption">在團體衛教結束後，民眾踴躍嘗試被測血糖，志工幫民眾測血糖</div>
-                            <div class="caption">志工們至山區義診，需先健行一段山路</div>
-                            <div class="caption">志工們至山區義診，需先穿越溪流</div>
-                            <div class="caption">志工幫學童洗髮，清除頭蝨</div>
-                            <div class="caption">志工幫病患測血糖</div>
-                            <div class="caption">志工於診間協助義診及量測血壓</div>
-                            <div class="caption">志工至山區媽媽會進行團體衛教</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞大師生為尼泊爾奇旺區喬哥地民眾進行團體衛教
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞大志工團成員討論如何分裝提供給尼泊爾山區民眾的藥物
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    在團體衛教結束後，民眾踴躍嘗試被測血糖，志工幫民眾測血糖
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工們至山區義診，需先健行一段山路
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工們至山區義診，需先穿越溪流
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工幫學童洗髮，清除頭蝨
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工幫病患測血糖
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工於診間協助義診及量測血壓
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    志工至山區媽媽會進行團體衛教
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
@@ -160,6 +196,13 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam4 = {!! json_encode($userTeam4) !!};
             @if (Auth::check())
             if (userTeam4 === 1) {

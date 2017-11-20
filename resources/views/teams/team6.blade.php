@@ -27,12 +27,36 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">執行偏遠村落孩童的營養粥計畫；攝於柬埔寨暹粒TAOM村落</div>
-                            <div class="caption">服務期間的反思活動，幫助海外志工釐清與重整服務的感受與觀察；攝於柬埔寨暹粒天主堂St John's Catholic Church</div>
-                            <div class="caption">海外服務在異國文化裡，重新學習、感受、體驗與服務實作；攝於柬埔寨暹粒TAOM村落</div>
-                            <div class="caption">海外服務是團隊合作的過程，須拋開個人式英雄主義的浪漫；攝於柬埔寨金邊貧民窟服務據點Rudi Boa Centre</div>
-                            <div class="caption">海外青年志工與當地青年的協力合作模式，培養跨國團隊合作能力；攝於柬埔寨金邊非營利機構Advanced Centre for Empowerment</div>
-                            <div class="caption">配合當地需求，志工進行房屋修繕服務攝於柬埔寨暹粒TAOM村落</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    執行偏遠村落孩童的營養粥計畫；攝於柬埔寨暹粒TAOM村落
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    服務期間的反思活動，幫助海外志工釐清與重整服務的感受與觀察；攝於柬埔寨暹粒天主堂St John's Catholic Church
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    海外服務在異國文化裡，重新學習、感受、體驗與服務實作；攝於柬埔寨暹粒TAOM村落
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    海外服務是團隊合作的過程，須拋開個人式英雄主義的浪漫；攝於柬埔寨金邊貧民窟服務據點Rudi Boa Centre
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    海外青年志工與當地青年的協力合作模式，培養跨國團隊合作能力；攝於柬埔寨金邊非營利機構Advanced Centre for Empowerment
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    配合當地需求，志工進行房屋修繕服務攝於柬埔寨暹粒TAOM村落
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
@@ -158,6 +182,13 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam6 = {!! json_encode($userTeam6) !!};
             @if (Auth::check())
             if (userTeam6 === 1) {

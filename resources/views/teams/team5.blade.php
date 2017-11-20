@@ -28,12 +28,36 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">外文系志工在Village Public English Boarding School前合影</div>
-                            <div class="caption">外文系志工教導尼泊爾孩童中文的十二生肖念法及故事</div>
-                            <div class="caption">外文系志工與學童在教室合影</div>
-                            <div class="caption">外文系志工與學童在教室外合影</div>
-                            <div class="caption">外文系志工雲冠傑和郭珈伶教導孩童製作風箏，期待孩童們的夢想起飛</div>
-                            <div class="caption">外文系志工黃冠毓、陳姿霖和陳育萱代表系上捐贈書籍物資給該校校長Mr. Bhaju Ram Mahato</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工在Village Public English Boarding School前合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工教導尼泊爾孩童中文的十二生肖念法及故事
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工與學童在教室合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工與學童在教室外合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工雲冠傑和郭珈伶教導孩童製作風箏，期待孩童們的夢想起飛
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    外文系志工黃冠毓、陳姿霖和陳育萱代表系上捐贈書籍物資給該校校長Mr. Bhaju Ram Mahato
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
@@ -129,6 +153,13 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam5 = {!! json_encode($userTeam5) !!};
             @if (Auth::check())
                 if (userTeam5 === 1) {

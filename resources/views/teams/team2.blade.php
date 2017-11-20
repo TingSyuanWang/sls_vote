@@ -29,14 +29,46 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">亞洲大學國際志工團、青運沙巴州分會幹部、保佛及吧巴中學學生與長輩合影</div>
-                            <div class="caption">亞洲大學國際志工團、青運沙巴州分會幹部、保佛及吧巴中學學生與馬來西亞沙巴州兒童之家的孩童合影</div>
-                            <div class="caption">亞洲大學國際志工團、青運沙巴州分會幹部與馬來西亞沙巴州青年理事會合影</div>
-                            <div class="caption">亞洲大學國際志工團、青運沙巴州分會與保佛中學學生合影</div>
-                            <div class="caption">亞洲大學國際志工團、青運沙巴州分會與吧巴中學學生合影</div>
-                            <div class="caption">亞洲大學國際志工團與青運沙巴州分會保佛支會會員合影</div>
-                            <div class="caption">亞洲大學國際志工團與馬來西亞沙巴州青年體育部常務秘書長 HAJI AWANG DAMIT BIN HJ. AG. ANAK合影</div>
-                            <div class="caption">亞洲大學國際志工與馬來西亞沙巴州里卡士濟世之家機構住民合影</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團、青運沙巴州分會幹部、保佛及吧巴中學學生與長輩合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團、青運沙巴州分會幹部、保佛及吧巴中學學生與馬來西亞沙巴州兒童之家的孩童合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團、青運沙巴州分會幹部與馬來西亞沙巴州青年理事會合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團、青運沙巴州分會與保佛中學學生合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團、青運沙巴州分會與吧巴中學學生合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團與青運沙巴州分會保佛支會會員合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工團與馬來西亞沙巴州青年體育部常務秘書長 HAJI AWANG DAMIT BIN HJ. AG. ANAK合影
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    亞洲大學國際志工與馬來西亞沙巴州里卡士濟世之家機構住民合影
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
@@ -159,6 +191,13 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam2 = {!! json_encode($userTeam2) !!};
             @if (Auth::check())
             if (userTeam2 === 1) {
