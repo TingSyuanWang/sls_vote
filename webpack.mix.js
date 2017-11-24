@@ -1,5 +1,7 @@
 let mix = require('laravel-mix');
 
+let webpack = require("webpack");
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -15,5 +17,5 @@ mix.js(['resources/assets/js/app.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/sweetalert/dist/sweetalert.min.js',
     'node_modules/jquery.marquee/jQuery.Marquee/jquery.marquee.js'], 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .styles(['resources/assets/sass/custom.css', 'node_modules/material-icons/css/material-icons.css'], 'public/css/libs.css');
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .styles(['resources/assets/sass/custom.css', 'node_modules/material-icons/css/material-icons.css'], 'public/css/libs.css');

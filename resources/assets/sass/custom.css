@@ -145,7 +145,25 @@ h3.background span {
 }
 
 .bg-sakura {
-    background-image: url("/2017love/img/sakura.png");
-    background-repeat: repeat;
-    background-position: left top;
+    background: url("/2017love/img/sakura.png") repeat left top;
+}
+
+.bg-top {
+    background: url("/2017love/img/bg.jpg") top center no-repeat #d7e77c;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .pb-md-11 {
+        padding-bottom: 11rem !important;
+    }
+}
+
+.bg-home-green {
+    background: #d7e77c;
+}
+
+.bg-card-pink {
+    background: #fdf9e5;
 }

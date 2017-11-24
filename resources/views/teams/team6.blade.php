@@ -92,6 +92,20 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="card mb-4">
+                            <h4 class="card-header"><i class="fa fa-paw" aria-hidden="true"></i> 腳步與足跡</h4>
+                            <div class="card-body">
+                                <p class="card-title text-justify">
+                                    捐贈部分，共計6,436元美金，分別為：
+                                <ul class="number-list">
+                                    <li>金邊非營利機構 Advanced Centre for Empowerment 3,036美金，資助貧民窟服務據點計畫。</li>
+                                    <li>暹粒天主堂St. John Catholic Church 3,200美金(其中1,200美金為購買學童上學腳踏車的捐款、1,000美金為營養粥計畫捐款、餘1,000美金為慈善捐款不指定用途)。</li>
+                                    <li>仁愛傳教修女會Missionaries of Charity 兒童中心 200美金，資助兒童照顧日常開支。</li>
+                                </ul>
+                                捐贈物資部分，共計捐贈366公斤，兒童夏衣、文具、牙刷牙膏等衛生用品等物品。
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="card mb-4">
@@ -126,25 +140,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <div class="card">
-                            <h4 class="card-header"><i class="fa fa-paw" aria-hidden="true"></i> 腳步與足跡</h4>
-                            <div class="card-body">
-                                <p class="card-title text-justify">
-                                    捐贈部分，共計6,436元美金，分別為：
-                                    <ul class="number-list">
-                                        <li>金邊非營利機構 Advanced Centre for Empowerment 3,036美金，資助貧民窟服務據點計畫。</li>
-                                        <li>暹粒天主堂St. John Catholic Church 3,200美金(其中1,200美金為購買學童上學腳踏車的捐款、1,000美金為營養粥計畫捐款、餘1,000美金為慈善捐款不指定用途)。</li>
-                                        <li>仁愛傳教修女會Missionaries of Charity 兒童中心 200美金，資助兒童照顧日常開支。</li>
-                                    </ul>
-                                    捐贈物資部分，共計捐贈366公斤，兒童夏衣、文具、牙刷牙膏等衛生用品等物品。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-4">
-                        <div class="card">
+                        <div class="card mb-4">
                             <h4 class="card-header"><i class="fa fa-smile-o" aria-hidden="true"></i> 師生心得反思</h4>
                             <div class="card-body">
                                 <p class="card-title text-justify">
@@ -182,6 +178,21 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            var StartTime = new Date(2017, 10, 24, 9, 0);
+            var EndTime = new Date(2017, 11, 1, 16, 0);
+            var current = Date.now();
+            var currentTime = Date(current);
+
+            if (Date.parse(currentTime) < Date.parse(StartTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else if (Date.parse(currentTime) > Date.parse(EndTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else {
+                $('#like-button').prop('disabled', false);
+            }
+
             $('.marquee').marquee({
                 duration: 10000,
                 gap: 50,

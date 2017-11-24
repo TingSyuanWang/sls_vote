@@ -191,6 +191,21 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            var StartTime = new Date(2017, 10, 24, 9, 0);
+            var EndTime = new Date(2017, 11, 1, 16, 0);
+            var current = Date.now();
+            var currentTime = Date(current);
+
+            if (Date.parse(currentTime) < Date.parse(StartTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else if (Date.parse(currentTime) > Date.parse(EndTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else {
+                $('#like-button').prop('disabled', false);
+            }
+
             $('.marquee').marquee({
                 duration: 10000,
                 gap: 50,

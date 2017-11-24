@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app" class="bg-sakura">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -51,8 +51,8 @@
 
                                 <div class="dropdown-menu" role="menu">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                         登出
                                     </a>
 

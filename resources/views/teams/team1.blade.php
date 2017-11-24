@@ -29,19 +29,51 @@
                     </div>
                     <div class="controls">
                         <div class="captions">
-                            <div class="caption">台中動保協會</div>
-                            <div class="caption">彩色校徽校名</div>
-                            <div class="caption">香港何善恆敬老院</div>
-                            <div class="caption">香港何文田宿舍</div>
-                            <div class="caption">香港天水圍社區訪查天水圍</div>
-                            <div class="caption">香港惜食堂</div>
-                            <div class="caption">香港源朗少數族裔調查</div>
-                            <div class="caption">香港生命生命歷程體驗</div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    台中動保協會
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    彩色校徽校名
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港何善恆敬老院
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港何文田宿舍
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港天水圍社區訪查天水圍
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港惜食堂
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港源朗少數族裔調查
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="marquee">
+                                    香港生命生命歷程體驗
+                                </div>
+                            </div>
                         </div>
                         <div class="pagination"></div>
                     </div>
                 </div>
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/cMOBwPmcqK8" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/bM2DZrA3IiY" frameborder="0" allowfullscreen></iframe>
                 <h3 class="text-center font-italic text-secondary background mt-4 mb-4"><span>多元體驗，就選管院</span></h3>
                 <div class="row">
                     <div class="col-12 col-md-6 mb-4">
@@ -186,6 +218,28 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            var StartTime = new Date(2017, 10, 24, 9, 0);
+            var EndTime = new Date(2017, 11, 1, 16, 0);
+            var current = Date.now();
+            var currentTime = Date(current);
+
+            if (Date.parse(currentTime) < Date.parse(StartTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else if (Date.parse(currentTime) > Date.parse(EndTime)) {
+                $('#like-button').prop('disabled', true);
+                $('#like-button').text('投票尚未開始喔！');
+            } else {
+                $('#like-button').prop('disabled', false);
+            }
+
+            $('.marquee').marquee({
+                duration: 10000,
+                gap: 50,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true
+            });
             var userTeam1 = {!! json_encode($userTeam1) !!};
             @if (Auth::check())
             if (userTeam1 === 1) {
