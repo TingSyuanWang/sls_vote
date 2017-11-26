@@ -167,3 +167,28 @@ h3.background span {
 .bg-card-pink {
     background: #fdf9e5;
 }
+
+.bg-empty-love {
+    background: url("/2017love/img/love_hand_empty.png") no-repeat;
+    background-size: 100%;
+    z-index: 200;
+}
+
+.love-position {
+    margin-top: 5rem;
+}
+
+.love-size {
+    width: 300px;
+}
+
+@media only screen and (max-width: 760px) {
+    .love-position {
+        margin-top: 3rem;
+        margin-bottom: 8rem;
+    }
+
+    .love-size {
+        width: 240px;
+    }
+}

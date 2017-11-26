@@ -9,7 +9,9 @@
         <div class="container pt-md-5 pb-md-11">
             <div class="row pb-md-11">
                 <div class="col-12 col-md-6 mt-2">
-                    <img src="{{asset('img/logo.png')}}" class="img-fluid" alt="logo" width="300">
+                    <div class="text-center">
+                        <img src="{{asset('img/logo.png')}}" class="img-fluid" alt="logo" width="300">
+                    </div>
                     <h4 class="mt-5"><b>活動目的</b></h4>
                     <p>為鼓勵本校師生參與志工服務，並了解服務學習活動宗旨，激發學生對社會與國際之使命感，藉本次「志工亞大」關懷系列活動，傳遞服務學習氛圍，進而推動志工理念，創造多元服務機會。</p>
                     <h4 class="mt-2"><b>投票規則</b></h4>
@@ -23,8 +25,10 @@
                         (六) 投票期間：民國106年11月27日(一)上午9點至12月01日(五)下午4點止。<br>
                     </p>
                 </div>
-                <div class="col-12 col-md-6 mt-2">
-                    <img src="{{asset('img/love_hand.png')}}" class="img-fluid" alt="love hand" width="500">
+                <div class="col-12 col-md-6 mt-2 bg-empty-love">
+                    <div class="text-center love-position">
+                        <img src="{{asset('img/love.png')}}" class="img-fluid faa-pulse animated love-size" alt="love hand">
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,8 +121,10 @@
                         <h4 class="card-title text-center">亞洲大學服務學習組</h4>
                         <hr>
                         <p class="card-text text-center">11/27 開幕式(M棟羅馬柱前)<br>
+                        開幕式時間：10:30-11:15<br>
                         11/27-12/1 成果擺攤(M棟羅馬柱前)<br>
-                        12/6  成果分享會(M001)<br><br><br><br><br><br></p>
+                        12/6 成果分享會(M001)<br>
+                        成果分享會時間：15:00-17:00<br><br><br><br></p>
                         <button class="btn btn-danger btn-block" disabled><i class="fa fa-handshake-o"></i> 感謝您的參與</button>
                     </div>
                 </div>

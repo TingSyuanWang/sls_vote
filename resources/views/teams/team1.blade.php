@@ -13,6 +13,16 @@
                 <h5 class="text-center text-dark">【團隊理念】</h5>
                 <p class="text-justify text-dark">兩校秉持對等交流精神，每年進行多元主題之機構服務。我們有系統與紮實的訓練，並有老師全程參與討論與指導。我們的訓練以自主學習與PBL方式進行，學生學習如何分析問題、尋找與組織資源、制訂與執行方案，最後還有檢討與成果發表。</p>
                 <button href="#" class="btn btn-primary btn-block mb-2" id="like-button"><i class="fa fa-thumbs-o-up"></i> 讚我一票</button>
+                <a href="https://www.facebook.com/pages/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8-%E7%94%A8%E6%84%9B%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8Cx%E5%BF%97%E5%B7%A5%E5%A4%A7%E5%AD%B8-%E9%97%9C%E6%87%B7%E6%B4%BB%E5%8B%95/2010527529182896" target="_blank" class="btn btn-warning btn-block mb-2 d-none d-md-block d-lg-block" id="facebook-share"><i class="fa fa-map-marker"></i> 電腦分享活動並打卡</a>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> 打卡分享</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> 打卡分享</a>
+                    </div>
+                </div>
+
                 <h3 class="text-danger text-center"><i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> {{$countTeam1}}</h3>
             </div>
             <div class="col-12 col-md-9">
@@ -218,7 +228,7 @@
 @section('script')
     <script>
         $(document).ready(function() {
-            var StartTime = new Date(2017, 10, 24, 9, 0);
+            var StartTime = new Date(2017, 10, 27, 9, 0);
             var EndTime = new Date(2017, 11, 1, 16, 0);
             var current = Date.now();
             var currentTime = Date(current);
@@ -228,7 +238,7 @@
                 $('#like-button').text('投票尚未開始喔！');
             } else if (Date.parse(currentTime) > Date.parse(EndTime)) {
                 $('#like-button').prop('disabled', true);
-                $('#like-button').text('投票尚未開始喔！');
+                $('#like-button').text('投票已經結束囉！');
             } else {
                 $('#like-button').prop('disabled', false);
             }
