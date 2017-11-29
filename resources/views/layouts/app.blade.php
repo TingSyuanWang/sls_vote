@@ -8,6 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta property="fb:app_id" content="372214206561558" />
+    <meta property="og:type" content="website" />
+@yield('seo')
+
+
     <title>@yield('title') | {{ config('app.name') }}</title>
     <link rel="shortcut icon" href="https://sls.asia.edu.tw/wp-content/uploads/fbrfg/favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

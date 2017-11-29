@@ -13,7 +13,15 @@ class TeamController extends Controller
 
         Session::put('links', '/');
 
-        return view('homepage');
+        $countTeam1 = SocialFacebookAccount::where('team1', '=', 1)->count();
+        $countTeam2 = SocialFacebookAccount::where('team2', '=', 1)->count();
+        $countTeam3 = SocialFacebookAccount::where('team3', '=', 1)->count();
+        $countTeam4 = SocialFacebookAccount::where('team4', '=', 1)->count();
+        $countTeam5 = SocialFacebookAccount::where('team5', '=', 1)->count();
+        $countTeam6 = SocialFacebookAccount::where('team6', '=', 1)->count();
+        $countTeam7 = SocialFacebookAccount::where('team7', '=', 1)->count();
+
+        return view('homepage', compact('countTeam1', 'countTeam2', 'countTeam3', 'countTeam4', 'countTeam5', 'countTeam6', 'countTeam7'));
     }
 
     public function team1() {

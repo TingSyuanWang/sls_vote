@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('seo')
+    <meta property="og:title" content="外國語文學系 尼泊爾暑期國際志工--尼泊爾學童夢想起飛" />
+    <meta property="og:image" content="{{asset('img/team5/logo.jpg')}}" />
+    <meta property="og:url" content="{{route('team5')}}" />
+    <meta property="og:description" content="為協助尼泊爾學童在2015年強震後的受教權不因天災而有影響，本系學生赴當地學校，以所學專長進行英/華語教學和生活學習輔導，並捐贈當地孩童此次募集之圖書資源，以期讓他們獲得較佳之學習環境。外文系學生運用學生所學專長與知能，提供尼泊爾當地孩童有價值之服務，進一步激發青年志工對國際社會之使命感、責任感，增進台灣與尼泊爾民間相互瞭解及交流。" />
+@endsection
+
 @section('title')
     外國語文學系 尼泊爾暑期國際志工--尼泊爾學童夢想起飛
 @endsection
@@ -17,10 +24,10 @@
                 <a href="https://www.facebook.com/pages/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8-%E7%94%A8%E6%84%9B%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8Cx%E5%BF%97%E5%B7%A5%E5%A4%A7%E5%AD%B8-%E9%97%9C%E6%87%B7%E6%B4%BB%E5%8B%95/2010527529182896" target="_blank" class="btn btn-warning btn-block mb-2 d-none d-md-block d-lg-block" id="facebook-share"><i class="fa fa-map-marker"></i> 電腦分享活動並打卡</a>
                 <div class="row">
                     <div class="col-6">
-                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> 打卡分享</a>
+                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> Android 打卡</a>
                     </div>
                     <div class="col-6">
-                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> 打卡分享</a>
+                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> iPhone 打卡</a>
                     </div>
                 </div>
                 <h3 class="text-danger text-center"><i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> {{$countTeam5}}</h3>

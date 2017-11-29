@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
+@section('seo')
+    <meta property="og:title" content="亞洲大學國際醫療志工團-2017年尼泊爾義診-送愛到天堂計劃" />
+    <meta property="og:image" content="{{asset('img/team4/logo.jpg')}}" />
+    <meta property="og:url" content="{{route('team4')}}" />
+    <meta property="og:description" content="亞洲大學國際醫療志工服務團，成員為亞洲大學醫學暨健康學院各科系之在學學生志工，發揮團隊合作的精神，運用在校所學之醫療照護專業與技能，秉持視病猶親的服務熱忱，至尼泊爾喬哥地區照護當地民眾的醫療需求。本團隊成立的宗旨為經由不同醫護科系學生志工的跨領域合作，提供尼泊爾喬哥地區居民所需的醫療照護。" />
+@endsection
+
 @section('title')
-    亞洲大學國際醫療志工團-2017年尼泊爾義診-送愛到天堂計劃
+亞洲大學國際醫療志工團-2017年尼泊爾義診-送愛到天堂計劃
 @endsection
 
 @section('content')
@@ -17,10 +24,10 @@
                 <a href="https://www.facebook.com/pages/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8-%E7%94%A8%E6%84%9B%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8Cx%E5%BF%97%E5%B7%A5%E5%A4%A7%E5%AD%B8-%E9%97%9C%E6%87%B7%E6%B4%BB%E5%8B%95/2010527529182896" target="_blank" class="btn btn-warning btn-block mb-2 d-none d-md-block d-lg-block" id="facebook-share"><i class="fa fa-map-marker"></i> 電腦分享活動並打卡</a>
                 <div class="row">
                     <div class="col-6">
-                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> 打卡分享</a>
+                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> Android 打卡</a>
                     </div>
                     <div class="col-6">
-                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> 打卡分享</a>
+                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> iPhone 打卡</a>
                     </div>
                 </div>
                 <h3 class="text-danger text-center"><i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> {{$countTeam4}}</h3>
@@ -89,7 +96,7 @@
                         <div class="pagination"></div>
                     </div>
                 </div>
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/cMOBwPmcqK8" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/rN-UnUiZNV8" frameborder="0" allowfullscreen></iframe>
                 <h3 class="text-center font-italic text-secondary background mt-4 mb-4"><span>有尼的投票，我們會做得更好！</span></h3>
                 <div class="row">
                     <div class="col-12 col-md-6">

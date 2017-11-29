@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
+@section('seo')
+    <meta property="og:title" content="柬團第八梯：柬埔寨弱勢社區服務方案" />
+    <meta property="og:image" content="{{asset('img/team6/logo.jpg')}}" />
+    <meta property="og:url" content="{{route('team6')}}" />
+    <meta property="og:description" content="「柬團第八梯：柬埔寨弱勢社區服務方案」延續前七梯次的服務能量，於偏鄉弱勢社區進行服務，透過海外跨文化服務，讓學生發揮潛能與學科訓練專長，建立國際視野與領導統籌能力，也持續強化與柬埔寨大專青年的協力合作模式，讓跨國青年學生彼此交流、相互學習、建立國際團隊合作與協調的能力。" />
+@endsection
+
 @section('title')
-    柬團第八梯：柬埔寨弱勢社區服務方案
+柬團第八梯：柬埔寨弱勢社區服務方案
 @endsection
 
 @section('content')
@@ -16,10 +23,10 @@
                 <a href="https://www.facebook.com/pages/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8-%E7%94%A8%E6%84%9B%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8Cx%E5%BF%97%E5%B7%A5%E5%A4%A7%E5%AD%B8-%E9%97%9C%E6%87%B7%E6%B4%BB%E5%8B%95/2010527529182896" target="_blank" class="btn btn-warning btn-block mb-2 d-none d-md-block d-lg-block" id="facebook-share"><i class="fa fa-map-marker"></i> 電腦分享活動並打卡</a>
                 <div class="row">
                     <div class="col-6">
-                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> 打卡分享</a>
+                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> Android 打卡</a>
                     </div>
                     <div class="col-6">
-                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> 打卡分享</a>
+                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> iPhone 打卡</a>
                     </div>
                 </div>
                 <h3 class="text-danger text-center"><i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> {{$countTeam6}}</h3>

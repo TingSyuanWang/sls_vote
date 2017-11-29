@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'TeamController@index')->name('homepage');
+Route::get('pagenotfound', ['as' => 'notfound', 'uses' => 'HomeController@pagenotfound']);
 
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 

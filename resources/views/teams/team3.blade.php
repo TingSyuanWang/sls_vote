@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
+@section('seo')
+    <meta property="og:title" content="印度暑期青年志願服務暨社福機構交流計畫" />
+    <meta property="og:image" content="{{asset('img/team3/logo.jpg')}}" />
+    <meta property="og:url" content="{{route('team3')}}" />
+    <meta property="og:description" content="本團隊針對印度貧窮及弱勢人口之志願服務，並建構本校出團師生與印度清奈地區HCAS社工系師生及當地社福機構協力合作服務模式。希望透過此計畫讓兩國社會服務人力可以彼此交流、相互學習、建立與印度清奈地區青年之協力合作模式，以及建立國際團隊合作與協調的典範。" />
+@endsection
+
 @section('title')
-    印度暑期青年志願服務暨社福機構交流計畫
+印度暑期青年志願服務暨社福機構交流計畫
 @endsection
 
 @section('content')
@@ -16,10 +23,10 @@
                 <a href="https://www.facebook.com/pages/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8-%E7%94%A8%E6%84%9B%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8Cx%E5%BF%97%E5%B7%A5%E5%A4%A7%E5%AD%B8-%E9%97%9C%E6%87%B7%E6%B4%BB%E5%8B%95/2010527529182896" target="_blank" class="btn btn-warning btn-block mb-2 d-none d-md-block d-lg-block" id="facebook-share"><i class="fa fa-map-marker"></i> 電腦分享活動並打卡</a>
                 <div class="row">
                     <div class="col-6">
-                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> 打卡分享</a>
+                        <a href="fb://page/2010527529182896" class="btn btn-success btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-android"></i> Android 打卡</a>
                     </div>
                     <div class="col-6">
-                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> 打卡分享</a>
+                        <a href="fb://page/?id=2010527529182896" class="btn btn-danger btn-block mb-2 d-block d-md-none d-lg-none"><i class="fa fa-apple"></i> iPhone 打卡</a>
                     </div>
                 </div>
                 <h3 class="text-danger text-center"><i class="fa fa-heart faa-pulse animated" aria-hidden="true"></i> {{$countTeam3}}</h3>
